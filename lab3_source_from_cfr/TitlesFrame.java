@@ -19,7 +19,7 @@ extends JFrame {
         this.setDefaultCloseOperation(3);
         this.add(new TitlesPanel(78));
         this.setSize(350, 350);
-        this.setLocationRelativeTo(null);
+        //this.setLocationRelativeTo(null);
     }
 
     /**
