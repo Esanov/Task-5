@@ -26,13 +26,13 @@ implements ActionListener {
     private Timer animation;
     private boolean is_done = true;
     private int start_angle = 0;
-    private int shape;
+    private int shapeFigure;
 
     /**
      * Sets the title of the window.
      */
-    public TitlesPanel(int _shape) {
-        this.shape = _shape;
+    public TitlesPanel(int _shapeFigure) {
+        this.shapeFigure = _shapeFigure;
         this.animation = new Timer(50, this);
         this.animation.setInitialDelay(50);
         this.animation.start();
@@ -57,7 +57,7 @@ implements ActionListener {
         Insets insets = this.getInsets();
         int w = size.width - insets.left - insets.right;
         int h = size.height - insets.top - insets.bottom;
-        ShapeFactory shape = new ShapeFactory(this.shape);
+        ShapeFactory shape = new ShapeFactory(this.shapeFigure);
         this.g2d.setStroke(shape.stroke);
         this.g2d.setPaint(shape.paint);
         double angle = this.start_angle++;
